@@ -203,7 +203,7 @@ p {
 	}
 	.leftSide {
 		height: 35vh;
-		width: 100vw;
+		width: 100%;
 	}
 	.back {
 		left: 35vw;
@@ -217,8 +217,8 @@ p {
 		top: 182px !important;
 	}
 	.rightSide {
-		margin-top: 150px;
-		width: 100vw;
+		margin-top: 170px !important;
+		width: 90vw;
 		padding-left: 0;
 	}
 	.completed{
