@@ -78,3 +78,21 @@
     padding: 20px 20px 0 20px;
     color: var(--white);
 }
+
+/* back of card */
+.back{
+    background: url(./images/bg-card-back.png);
+    width: 447px;
+    height: 243px;
+    position: relative;
+    top: 130px;
+    left: 450px;
+}
+
+.secCode{
+    position: absolute;
+    left: 353px;
+    top: 109px;
+    color: white;
+    letter-spacing: 2px;
+}
