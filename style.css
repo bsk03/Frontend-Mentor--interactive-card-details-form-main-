@@ -17,3 +17,60 @@
     --linGrad: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
     --red:hsl(0, 100%, 66%);
 }
+
+/* body */
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.leftSide{
+    width: 35vw;
+    height: 100vh;
+    background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+
+.rightSide{
+    background-color: var(--white);
+}
+
+/* left-side */
+.leftSide div{
+    position: relative;
+    left: 18vw;
+    top: 100px;
+}
+
+.backCard{
+    position: relative;
+    left: 23vw;
+    top: 150px;
+}
+/* front of card */
+.cardLogo{
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+.cardNum{
+    position: absolute;
+    left: 40px;
+    top: 140px;
+    color: var(--white);
+    font-size: 30px;
+    
+}
+
+.name{
+    position: absolute;
+    left: 40px;
+    top: 200px;
+    color: var(--white);
+}
+
+.expireDate{
+    position: absolute;
+    left: 320px;
+    top: 200px;
+    color: var(--white);
+}

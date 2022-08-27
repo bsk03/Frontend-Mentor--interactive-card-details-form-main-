@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
 <body>
-
+<div class="wrapper">
+  <div class="leftSide">
+    <div><img src="./images/bg-card-front.png" alt="card" class="card">
+      <img src="./images/card-logo.svg" alt="card logo" class="cardLogo">
+      <p class="cardNum">0000 0000 0000 0000</p>
+      <p class="name">  Jane Appleseed</p>
+      <p class="expireDate">00/00</p>
+    </div>
+    <img src="./images/bg-card-back.png" alt="back card" class="backCard">
+  </div>
+  <div class="rightSide"></div>
+</div>
 
 
   <!-- 0000 0000 0000 0000
@@ -38,10 +49,10 @@
   We've added your card details
   Continue -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
   <script src="js.js"></script>
 </body>
 </html>
