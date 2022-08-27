@@ -30,31 +30,34 @@
 			</div>
 			<div class="rightSide">
 				<div class="formContainer">
-					<form action="" class="form">
-						<p>cardholder name
-							<input type="text" placeholder="e.g Błażej Kowalczyk" />
-              <p class="nameError"></p>
+					<form action="" method="" class="form">
+						<p class="cName">cardholder name
+							<input type="text" placeholder="e.g Błażej Kowalczyk" class="formName"/>
+              <p class="nameError">&nbsp;</p>
 						</p>
-            <p>
+            <p class="e">
               card number
-						<input type="text" placeholder="e.g 1234 5678 9123 0000" />
-            <p class="cardNumError"></p>
+						<input type="text" placeholder="e.g 1234 5678 9123 0000" class="cNums" />
+            <p class="cardNumError">&nbsp;</p>
             </p>
 						<div class="nums">
 							<div class="exp">
                 <p>exp. date (mm/yy)
                   <div>
-								<input type="text" placeholder="MM" />
-								<input type="text" placeholder="YY"/>
+								<input type="text" placeholder="MM" class="cMonth" />
+								<input type="text" placeholder="YY" class="cYear"/>
               </div>
-                <p class="expError"></p>
+                <p class="expError">&nbsp;</p>
               </p>
 							</div>
-              <p>CVC
-							<input type="text" placeholder="e.g 123"/>
-            <p class="cvcError"></p></p>
+              <div class="cvcContainer">
+              <p class="cvcP">CVC
+							<input type="text" placeholder="e.g 123" class="cCvc"/>
+            <p class="cvcError">&nbsp;</p>
+          </p>
+          </div>
 						</div>
-            <button>Confirm</button>
+            <button class="confirm">Confirm</button>
 					</form>
 				</div>
 			</div>

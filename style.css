@@ -104,7 +104,7 @@
     justify-content: center;
     align-items: center;
     width: 65vw;
-
+    padding-left: 300px;
 }
 .form{
     display: flex;
@@ -123,4 +123,68 @@
 .exp{
     display: flex;
     flex-direction: column;
+}
+.form input{
+    border: 1px solid var(--lGrayViol);
+}
+    
+
+.formName, .cNums{
+    margin: 10px 10px 2px 0;
+    width: 400px;
+    padding: 10px;
+}
+.nameError, .cardNumError{
+    font-size: 15px;
+}
+.cMonth, .cYear{
+    width: 100px;
+    padding: 10px;
+    margin: 10px 10px 2px 0;
+}
+
+.cCvc{
+    width: 155px;
+    padding: 10px;
+    
+}
+.cvcP{
+    margin: 10px 10px 2px 20px;
+    padding: 2px;
+}
+.cvcError{
+    margin-left:20px ;
+}
+.nameError, .cardNumError, .cvcError, .expError{
+    color: var(--red);
+    font-size: 15px;
+    font-weight: 900;
+}
+.confirm{
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--vDarkViol);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+*:focus {
+    outline: none;
+}
+.confirm:hover{
+    background-color: hsl(249, 99%, 64%);
+}
+input{
+    border-radius: 8px;
+}
+input:focus{
+    border: 1px solid var(--vDarkViol);
+}
+
+p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
