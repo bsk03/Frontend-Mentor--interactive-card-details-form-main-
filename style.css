@@ -35,7 +35,7 @@
 }
 
 /* left-side */
-.leftSide div{
+.leftSide .front{
     position: relative;
     left: 18vw;
     top: 100px;
@@ -47,30 +47,34 @@
     top: 150px;
 }
 /* front of card */
+
+
+.front{
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/bg-card-front.png);
+    width: 447px;
+    height: 243px;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
 .cardLogo{
-    position: absolute;
-    left: 40px;
-    top: 30px;
+    height: 50px;
+    width: 100px;
 }
 .cardNum{
-    position: absolute;
-    left: 40px;
-    top: 140px;
-    color: var(--white);
+    margin-top: 70px;
     font-size: 30px;
-    
-}
-
-.name{
-    position: absolute;
-    left: 40px;
-    top: 200px;
     color: var(--white);
+    text-align: center;
+   padding: 0 10px 0 10px;
+   letter-spacing: 2px;
 }
-
-.expireDate{
-    position: absolute;
-    left: 320px;
-    top: 200px;
+.personalInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
     color: var(--white);
 }
