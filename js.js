@@ -27,16 +27,22 @@ const form = document.querySelector('.rightSide');
 const switchForm = document.querySelector('.completed')
 
 
-const spaces = () => {
-	if (formNums.value.length > 0) {
-		if (formNums.value.length === 4) {
-			formNums.value += '\u00A0';
-		} else if (formNums.value.length === 9) {
-			formNums.value += '\u00A0';
-		} else if (formNums.value.length === 14) {
-			formNums.value += '\u00A0';
+
+
+const spaces = (e) => {
+	const key = e.key;
+	if(key !== "Backspace"){
+		if (formNums.value.length > 0) {
+			if (formNums.value.length === 4) {
+				formNums.value += '\u00A0';
+			} else if (formNums.value.length === 9) {
+				formNums.value += '\u00A0';
+			} else if (formNums.value.length === 14) {
+				formNums.value += '\u00A0';
+			}
 		}
 	}
+	
 };
 
 console.log(form);
@@ -147,5 +153,21 @@ const checkName = () => {
 	}
 };
 
+const renew = () => {
+	cardName.textContent = 'Jane APPLESEED';
+	cardNum.textContent = '0000 0000 0000 0000';
+	cardY.textContent = '00';
+	cardM.textContent = '00';
+	cardSecCode.value = '000';
+
+	formName.value = '';
+	formNums.value =''
+	formExpMonth.value ='';
+	formExpYear.value='';
+	formSecCode.value='';
+	form.classList.remove('hide');
+    switchForm.classList.add('hide');
+}
+continuee.addEventListener('click',renew)
 formNums.addEventListener('keyup', spaces);
 confirm.addEventListener('click', checkName);
