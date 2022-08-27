@@ -1,7 +1,8 @@
 // card
 const cardNum = document.querySelector('.cardNum');
 const cardName = document.querySelector('.name');
-const cardExpireDate = document.querySelector('.expireDate');
+const cardM = document.querySelector('.cardM');
+const cardY = document.querySelector('.cardY');
 const cardSecCode = document.querySelector('.secCode');
 // form values
 const formName = document.querySelector('.formName');
@@ -38,20 +39,21 @@ const spaces = () => {
 	}
 };
 
-
 const checkCvg = () => {
 	if (formSecCode.value.match(letters)) {
 		secError.textContent = 'Letters are not allowed';
-        formSecCode.style.border = '1px solid red';
+		formSecCode.style.border = '1px solid red';
 	} else if (formSecCode.value.match(special)) {
 		secError.textContent = 'Special chars are not allowed';
-        formSecCode.style.border = '1px solid red';
+		formSecCode.style.border = '1px solid red';
 	} else if (formSecCode.value.length !== 3) {
 		secError.textContent = 'Bad security code';
-        formSecCode.style.border = '1px solid red';
+		formSecCode.style.border = '1px solid red';
 	} else {
+        cardSecCode.textContent = formSecCode.value;
 		secError.textContent = '\u00A0';
-        formSecCode.style.border = '1px solid var(--lGrayViol)';
+		formSecCode.style.border = '1px solid var(--lGrayViol)';
+
 	}
 };
 const checkExpYear = () => {
@@ -67,13 +69,15 @@ const checkExpYear = () => {
 	} else if (formExpYear.value.length === 0) {
 		expError.textContent = `It can't be blank!`;
 		formExpYear.style.border = '1px solid red';
-	}else if(formExpYear.value.length > 2){
-        expError.textContent = 'To much chars';
-        formExpYear.style.border = '1px solid red';
-    } else {
-		checkCvg();
+	} else if (formExpYear.value.length > 2) {
+		expError.textContent = 'To much chars';
+		formExpYear.style.border = '1px solid red';
+	} else {
+		cardY.textContent = formExpYear.value;
+
 		expError.textContent = '\u00A0';
 		formExpYear.style.border = '1px solid var(--lGrayViol)';
+		checkCvg();
 	}
 };
 const checkExpMonth = () => {
@@ -93,9 +97,14 @@ const checkExpMonth = () => {
 		expError.textContent = `It can't be blank!`;
 		formExpMonth.style.border = '1px solid red';
 	} else {
-		checkExpYear();
+		if ((formExpMonth.value.length == 1)) {
+			cardM.textContent = `0${formExpMonth.value}`;
+		} else {
+			cardM.textContent = formExpMonth.value;
+		}
 		expError.textContent = '\u00A0';
 		formExpMonth.style.border = '1px solid var(--lGrayViol)';
+		checkExpYear();
 	}
 };
 
@@ -110,9 +119,10 @@ const checkNumber = () => {
 		cardNumError.textContent = 'Wrong format';
 		formNums.style.border = '1px solid red';
 	} else {
-		checkExpMonth();
+		cardNum.textContent = formNums.value;
 		cardNumError.textContent = '\u00A0';
 		formNums.style.border = '1px solid var(--lGrayViol)';
+		checkExpMonth();
 	}
 };
 
@@ -124,9 +134,10 @@ const checkName = () => {
 		nameError.textContent = `It can't be blank!`;
 		formName.style.border = '1px solid red';
 	} else {
-		checkNumber();
+		cardName.textContent = formName.value;
 		nameError.textContent = '\u00A0';
 		formName.style.border = '1px solid var(--lGrayViol)';
+		checkNumber();
 	}
 };
 
