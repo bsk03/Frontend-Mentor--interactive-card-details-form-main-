@@ -86,7 +86,7 @@
     height: 243px;
     position: relative;
     top: 130px;
-    left: 450px;
+    left: 25vw;
 }
 
 .secCode{
@@ -95,4 +95,32 @@
     top: 109px;
     color: white;
     letter-spacing: 2px;
+}
+
+/* right side */
+
+.rightSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65vw;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    color: var(--vDarkViol);
+}
+
+.nums{
+    display: flex;
+    flex-direction: row;
+}
+.form p{
+    display: flex;
+    flex-direction: column;
+}
+.exp{
+    display: flex;
+    flex-direction: column;
 }
