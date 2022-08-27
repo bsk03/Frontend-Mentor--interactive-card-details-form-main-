@@ -1,0 +1,19 @@
+/* GF */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/* Global */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    /* colors  */
+    --white:hsl(0, 0%, 100%);
+    --lGrayViol:hsl(270, 3%, 87%);
+    --dGrayViol:hsl(279, 6%, 55%);
+    --vDarkViol:hsl(278, 68%, 11%);
+    --linGrad: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red:hsl(0, 100%, 66%);
+}
