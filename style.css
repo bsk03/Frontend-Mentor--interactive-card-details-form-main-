@@ -165,7 +165,10 @@
 .expError {
 	color: var(--red);
 	font-size: 15px;
-	font-weight: 900;
+	/* font-weight: 900; */
+	letter-spacing: 0;
+	text-transform: none;
+	margin:5px 0 5px 0;
 }
 .confirm {
 	width: 400px;

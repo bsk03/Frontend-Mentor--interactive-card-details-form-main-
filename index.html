@@ -35,36 +35,34 @@
        <button class="continue">Continue</button>
       </div>
 			<div class="rightSide">
-				<div class="formContainer">
-					<form action="" method="" class="form">
+				<div class="formContainer form">
 						<p class="cName">cardholder name
 							<input type="text" placeholder="e.g Błażej Kowalczyk" class="formName"/>
               <p class="nameError">&nbsp;</p>
 						</p>
             <p class="e">
               card number
-						<input type="text" placeholder="e.g 1234 5678 9123 0000" class="cNums" />
+						<input type="text" placeholder="e.g 1234 5678 9123 0000" class="cNums" maxlength="19" />
             <p class="cardNumError">&nbsp;</p>
             </p>
 						<div class="nums">
 							<div class="exp">
                 <p>exp. date (mm/yy)
                   <div class="expMY">
-								<input type="text" placeholder="MM" class="cMonth" />
-								<input type="text" placeholder="YY" class="cYear"/>
+								<input type="text" placeholder="MM" class="cMonth" maxlength="2" />
+								<input type="text" placeholder="YY" class="cYear" maxlength="2"/>
               </div>
                 <p class="expError">&nbsp;</p>
               </p>
 							</div>
               <div class="cvcContainer">
               <p class="cvcP">CVC
-							<input type="text" placeholder="e.g 123" class="cCvc"/>
+							<input type="text" placeholder="e.g 123" class="cCvc" maxlength="3"/>
             <p class="cvcError">&nbsp;</p>
           </p>
           </div>
 						</div>
             <button class="confirm">Confirm</button>
-					</form>
 				</div>
 			</div>
 		</div>
