@@ -23,9 +23,9 @@ const letters = /[a-z]/i;
 const numbers = /[0-9]/;
 const special = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
-const test = () => {
-	console.log(formName.value);
-};
+const form = document.querySelector('.rightSide');
+const switchForm = document.querySelector('.completed')
+
 
 const spaces = () => {
 	if (formNums.value.length > 0) {
@@ -38,6 +38,12 @@ const spaces = () => {
 		}
 	}
 };
+
+console.log(form);
+    const completed = () => {
+        form.classList.add('hide');
+        switchForm.classList.remove('hide');
+    }
 
 const checkCvg = () => {
 	if (formSecCode.value.match(letters)) {
@@ -53,7 +59,7 @@ const checkCvg = () => {
         cardSecCode.textContent = formSecCode.value;
 		secError.textContent = '\u00A0';
 		formSecCode.style.border = '1px solid var(--lGrayViol)';
-
+        completed();
 	}
 };
 const checkExpYear = () => {

@@ -201,7 +201,9 @@ p {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
-
+.hide{
+	display: none !important;
+}
 @media (max-width: 1200px) {
 	.wrapper {
 		flex-direction: column;
@@ -304,7 +306,7 @@ p {
 	flex-direction: column;
 	width: 65vw;
 	padding-left: 300px;
-	display: none;
+
 }
 
 h1{
