@@ -158,7 +158,8 @@ const renew = () => {
 	cardNum.textContent = '0000 0000 0000 0000';
 	cardY.textContent = '00';
 	cardM.textContent = '00';
-	cardSecCode.value = '000';
+	cardSecCode.textContent = '000';
+	
 
 	formName.value = '';
 	formNums.value =''
